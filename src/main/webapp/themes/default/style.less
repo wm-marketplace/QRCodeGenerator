@@ -1,0 +1,1054 @@
+/*START - default Theme*/
+
+.wm-app {
+
+  @import url("../../../components/bootstrap/less/bootstrap.less");
+  @import url("variables.less");
+
+  font-size: @font-size-base;
+  color: @text-color;
+  font-family: @font-family-base;
+  background-color: @body-bg;
+
+  //Header
+  @wm-header-border-color: rgba(0, 0, 0, 0.1);
+  @wm-header-text-color: #515253;
+  @wm-header-bg-color: #fff;
+  @wm-header-height: auto;
+
+  //left panel
+  @wm-left-panel-bg: #F2F3F6;
+  @wm-left-panel-list-border: 1px #e6e5e5 solid;
+  @wm-left-panel-border-color: #CFDBE2;
+  @wm-left-panel-link-color: #515253;
+  @wm-left-panel-link-hover-bg: #e6e4e4;
+  @wm-left-panel-link-hover-text-color: @brand-primary;
+  @wm-left-panel-link-hover-border-color: @brand-primary;
+  @wm-left-panel-dropdown-menu-bg: transparent;
+
+  //right panel
+  @wm-right-panel-border-color: #CFDBE2;
+  @wm-right-panel-bg: #F2F3F6;
+  @wm-right-panel-btn-color: #515253;
+  @wm-right-panel-list-border: 1px #e6e5e5 solid;
+
+  //Footer
+  @wm-footer-border-color: #ccc;
+  @wm-footer-text-color: #515253;
+  @wm-footer-bg-color: #F5F7FA;
+  @wm-footer-height: auto;
+
+
+  //Table
+  @table-header-bg: #E7E9F1;
+
+  //Tabset
+  @nav-tabs-color-hover : @brand-primary;
+
+  //input group hover
+  @input-group-addon-hover-bg: #e7e7e7;
+
+  //Buttons
+  @btn-group-active-btn-bg: #fff;
+
+  //modal dialogs
+  @modal-header-bg: @navbar-default-bg;
+  @modal-header-color: @navbar-default-color;
+  @modal-header-border-color: #7B706A;
+
+  //Calendar
+  @wm-calendar-header-color: #adadad;
+  @wm-calendar-text-color: #adadad;
+
+  .img-rounded {
+    border-radius: @thumbnail-border-radius;
+  }
+  /******Label: overiding the label class as bootstrap is making all the labels bold***/
+  label {
+    font-weight: normal;
+  }
+  .label-primary, .label-success, .label-info, .label-warning, .label-danger {
+    color: #fff;
+  }
+  .text-danger {
+    color: darken(@brand-danger, 20%);
+  }
+  .text-success {
+    color: darken(@brand-success, 20%);
+  }
+  .text-info {
+    color: darken(@brand-info, 20%);
+  }
+  .text-primary {
+    color: darken(@brand-primary, 20%);
+  }
+  .text-warning {
+    color: darken(@brand-warning, 20%);
+  }
+  .h1,.h2,.h3,.h4,.h5,.h6 {
+    width: 100%;
+  }
+  .close {
+    opacity: 1;
+  }
+
+  //stylings for tile widget
+  .app-tile {
+    &.bg-danger, &.bg-success, &.bg-info, &.bg-warning {
+      color: @panel-primary-text;
+    }
+  }
+
+  /***Tabs Widget: Styling for the tabs widget comes here********/
+  //Tab Content
+  .tab-content {
+    .tab-body {
+      border-color: transparent;
+      padding: @padding-base-vertical @padding-base-horizontal;
+    }
+  }
+  //navigation
+  .nav-tabs {
+    border-bottom-color: @nav-tabs-border-color;
+    > li {
+      > a {
+        color: @text-color;
+        background-color: @nav-tabs-active-link-hover-bg;
+        border-radius: @border-radius-base;
+        box-shadow: none;
+        margin-right: 0;
+        border-width: 0 0 2px;
+        border-color: transparent;
+        text-transform: uppercase;
+        &:hover, &:focus {
+          color: @nav-tabs-color-hover;
+          background-color: @nav-tabs-active-link-hover-bg;
+          border-width: 0 0 2px;
+          border-color: transparent;
+          border-bottom-color: @brand-primary;
+        }
+      }
+      &.active {
+        > a {
+          color: @nav-tabs-color-hover;
+          border-width: 0 0 2px;
+          border-color: transparent;
+          border-bottom-color: @brand-primary;
+          &:hover, &:focus {
+            color: @nav-tabs-color-hover;
+            border-width: 0 0 2px;
+            border-color: transparent;
+            border-bottom-color: @brand-primary;
+          }
+        }
+      }
+      //Default styles for menu in nav
+      &.app-nav-item > .dropdown > a.dropdown-toggle {
+        padding: @nav-link-padding;
+        color: @text-color;
+        text-transform: uppercase;
+        line-height: 1.42857143;
+        border-width: 0 0 2px;
+        border-color: transparent;
+      }
+    }
+  }
+/***Tabs Widget: Styling for the tabs widget comes here********/
+  .list-group-item-separator {
+    margin-bottom: 2px;
+    border-radius: 2px;
+    .form-group {
+      padding: 0 @padding-base-horizontal;
+    }
+  }
+
+  //form styles
+  .form-group {
+    &.live-field.active {
+      .control-label {
+        color: @brand-primary;
+      }
+    }
+    .text-danger, .control-label.text-danger {
+      color: @brand-danger;
+    }
+
+    .ng-touched.ng-invalid .form-control {
+      border-color: @brand-danger;
+    }
+  }
+  .input-group-addon.colorpicker-container:last-child {
+    border-left: 1px solid @input-border;
+  }
+  .checkbox , .radio {
+      padding: 0 @padding-base-horizontal;
+  }
+
+  /***Button Style: Defining the sixe of the button for bootstrap classes********/
+  .btn {
+    text-transform: uppercase;
+    &.btn-lg {
+      font-size: 1.4em;
+    }
+    &.btn-xs {
+      padding: 0 0.5em;
+    }
+    .caret {
+      margin-left: 0.7em;
+    }
+    &.active, &:active {
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+
+  .btn-default {
+    &:hover, &:focus &:active {
+      color: @btn-default-color;
+      background-color: darken(@btn-default-bg, 10%);
+      border-color: darken(@btn-default-bg, 10%);
+    }
+  }
+
+  /***Modal Dialog Style: There is no property in bootstrap variable so setting it here********/
+  .modal-header {
+    background-color: @modal-header-bg;
+    border-bottom-color: @modal-header-border-color;
+    color: @modal-header-color;
+  }
+
+  //Breadcrumb
+  .breadcrumb {
+    li {
+      a {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  //Progress Bar
+  .progress {
+    border-radius: 0;
+    box-shadow: none;
+    height: 1.667em;
+    /****Progress circle***/
+    &.app-progress.circle {
+      path:last-of-type {
+        stroke: @brand-primary;
+      }
+      circle-progress {
+        svg path:last-of-type {
+          stroke: @brand-primary;
+        }
+      }
+      &.progress-circle-success {
+        svg path:last-of-type {
+          stroke: @brand-success;
+        }
+      }
+      &.progress-circle-info {
+          svg path:last-of-type {
+            stroke: @brand-info;
+          }
+      }
+      &.progress-circle-warning {
+          svg path:last-of-type {
+            stroke: @brand-warning;
+          }
+      }
+      &.progress-circle-danger {
+          svg path:last-of-type {
+            stroke: @brand-danger;
+          }
+      }
+    }
+  }
+
+  //Table
+  .table {
+    > thead {
+      > tr {
+        th {
+          text-transform: uppercase;
+          background-color: @table-header-bg;
+        }
+      }
+    }
+  }
+
+  /*****************************************************************************************************************************************/
+  /*********************************************************Layout**************************************************************************/
+  /*****************************************************************************************************************************************/
+  .app-content-column {
+    background-color: @body-bg;
+    padding: 1em;
+  }
+
+  //Header
+  .app-header, .app-mobile-header {
+    background-color: @wm-header-bg-color;
+    color: @wm-header-text-color;
+    box-shadow: 0px 1px 0px rgba(0,0,0,0.2);
+    border-color: transparent;
+    height: @wm-header-height;
+    a {
+      color: @wm-header-text-color;
+    }
+
+    .app-mobile-header {
+      background-color: @navbar-default-bg;
+      color: @navbar-default-color;
+      a {
+        color: @navbar-default-color;
+      }
+    }
+  }
+
+  //Popover wrapper styles in Navbar
+  .nav li > .app-popover-wrapper a {
+    padding: @nav-link-padding;
+    &:hover, &:focus {
+      background-color: @nav-link-hover-bg;
+    }
+  }
+  .nav-pills {
+    > li {
+      .app-popover-wrapper a {
+        border-radius: @border-radius-base;
+      }
+      &.active .app-popover-wrapper a {
+        color: @nav-pills-active-link-hover-color;
+        background-color: @nav-pills-active-link-hover-bg;
+        &:hover, &:focus {
+          color: @nav-pills-active-link-hover-color;
+          background-color: @nav-pills-active-link-hover-bg;
+        }
+      }
+    }
+  }
+
+  //Top Nav Bar
+  .app-navbar {
+    border-radius: 0;
+    color: @navbar-default-color;
+
+    .navbar-nav {
+      li {
+        a {
+          font-size: 1em;
+          padding-left: 2em;
+          padding-right: 2em;
+          text-transform: uppercase;
+          font-weight: normal;
+          text-decoration: none;
+          word-spacing: .4em;
+          i {
+            margin-right: 0.417em;
+          }
+          &:hover, &:focus, &.active {
+            color: @navbar-default-link-hover-color;
+            background-color: @navbar-default-hover-bg;
+          }
+        }
+        > .dropdown .dropdown-menu, .app-popover-wrapper a {
+          line-height: 16px;
+        }
+        &.active .app-popover-wrapper a {
+          background-color: @navbar-default-link-active-bg;
+          color: @navbar-default-link-active-color;
+        }
+
+        > .dropdown .dropdown-menu {
+          margin: 0;
+          background-color: @navbar-default-bg;
+          border-color: @navbar-default-bg;
+          a {
+            color: inherit;
+            padding: .65em 1em;
+            &:hover {
+              background-color: @navbar-default-hover-bg;
+            }
+          }
+        }
+      }
+
+      .app-nav-item {
+        > .dropdown, .app-popover-wrapper {
+          a.dropdown-toggle, a {
+            padding-left: 2em;
+            padding-right: 2em;
+            color: inherit;
+            &:hover {
+              background-color: @navbar-default-hover-bg;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /****nav widget****/
+  .app-nav {
+    &.nav-pills {
+      .app-nav-item {
+        a, .app-menu {
+          .dropdown-toggle {
+            padding: @padding-base-vertical @padding-base-horizontal;
+          }
+
+        }
+        &.active {
+          a, a.dropdown-toggle {
+            &:active, &.active:hover {
+              color: @nav-pills-active-link-hover-color;
+              background-color: @nav-pills-active-link-hover-bg;
+            }
+          }
+          .dropdown {
+            &.open {
+              .dropdown-toggle {
+                color: @nav-pills-active-link-hover-color;
+                background-color: @nav-pills-active-link-hover-bg;
+              }
+            }
+          }
+        }
+      }
+      &.nav-justified {
+        > li {
+          a, .app-menu {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  //Popover
+  .popover {
+    min-width: 16.667em;
+    .popover-content {
+      padding: 0;
+    }
+  }
+  .navbar-inverse .navbar-nav {
+    > li.active .app-popover-wrapper {
+      a, a:hover, a:focus, a:active {
+        color: @navbar-inverse-link-hover-color;
+        background-color: @navbar-inverse-link-active-bg;
+      }
+    }
+  }
+  //Sets the padding for menu list elements
+  .dropdown-menu > li > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  //Left & Right Panels
+  .app-left-panel, .app-right-panel {
+    .nav, .app-nav.nav-pills {
+      li {
+        margin-top: 0;
+        border-bottom: @wm-left-panel-list-border;
+        //for overriding the pills default color
+        &.active {
+          > a, .app-popover-wrapper a {
+            color: inherit;
+            background-color: @wm-left-panel-link-hover-bg;
+            &:hover, &:focus {
+              color: inherit;
+              background-color: @wm-left-panel-link-hover-bg;
+            }
+          }
+        }
+        a, .btn, .dropdown a, .app-menu .dropdown-toggle, .app-popover-wrapper a {
+          font-size: 0.917em;
+          text-transform: uppercase;
+          letter-spacing: .025em;
+          font-weight: 400;
+          padding: 1em;
+          position: relative;
+          border-radius: 0;
+          line-height: 1.7;
+          color: @wm-left-panel-link-color;
+          border-left: 0.5em solid transparent;
+          transition: color .5s ease, background .5s ease;
+          -webkit-transition: color .5s ease, background .5s ease;
+          -moz-transition: color .5s ease, background .5s ease;
+          -ms-transition: color .5s ease, background .5s ease;
+          -o-transition: color .5s ease, background .5s ease;
+          &:hover {
+            color: @wm-left-panel-link-hover-text-color;
+            text-decoration: none;
+            background-color: @wm-left-panel-link-hover-bg;
+            border-left-color: @wm-left-panel-link-hover-border-color;
+            transition: color .5s ease, background .5s ease;
+            -webkit-transition: color .5s ease, background .5s ease;
+            -moz-transition: color .5s ease, background .5s ease;
+            -ms-transition: color .5s ease, background .5s ease;
+            -o-transition: color .5s ease, background .5s ease;
+          }
+          &.active {
+            background-color: transparent;
+            border-left-color: @brand-primary;
+            color: @brand-primary;
+          }
+          .app-icon {
+            margin-right: 0.417em;
+          }
+          .caret {
+            margin-right: 1.25em;
+          }
+        }
+        > .dropdown.open {
+          > .dropdown-menu {
+            position: relative;
+            margin: 0 0 1.333em;
+            border: 0;
+            box-shadow: none;
+            background-color: @wm-left-panel-dropdown-menu-bg;
+            li {
+              a {
+                padding: 1em 1.667em;
+              }
+            }
+          }
+        }
+      }
+    }
+    .app-nav {
+      .app-nav-item {
+        > .dropdown {
+          > a {
+            padding: 1.333em;
+          }
+        }
+        &.active {
+          .dropdown.open {
+            .dropdown-toggle {
+                background-color: @wm-left-panel-link-hover-bg;
+                color: inherit;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dropdown.open {
+    .dropdown-menu {
+      margin-top:0;
+    }
+  }
+  //Left Panel
+  .app-left-panel {
+    background-color: @wm-left-panel-bg;
+    border-right: 1px solid @wm-left-panel-border-color;
+  }
+
+  //Right Panel
+  .app-right-panel {
+    background-color: @wm-right-panel-bg;
+    border-left: 1px solid @wm-right-panel-border-color;
+  }
+
+  //Footer
+  .app-footer {
+    padding: 1em 1.5em;
+    background-color: @wm-footer-bg-color;
+    color: @wm-footer-text-color;
+    border-top: 1px solid @wm-footer-border-color;
+    height: @wm-footer-height;
+  }
+
+  .btn-group {
+    .btn.active {
+      box-shadow: none;
+      background-color: @btn-group-active-btn-bg;
+      color: @text-color;
+    }
+  }
+
+  /******************************************************************************************************************************************/
+  /***************************************************Widgets styling************************************************************************/
+  /******************************************************************************************************************************************/
+  .form-group {
+    margin-bottom: 0.833em;
+  }
+  //for text, select controls
+  .form-control {
+    box-shadow: none;
+    &:focus {
+      border: 1px solid @input-border-focus;
+      box-shadow: none;
+    }
+  }
+  .form-control-static {
+    padding-bottom: 0;
+  }
+
+  .model-holder[bsdatepicker] {
+    min-height: @input-height-base;
+  }
+  //form widgets
+  .app-form, .app-liveform {
+    //for labels in the form
+    .control-label {
+      padding: @padding-base-vertical @padding-base-horizontal 0 @padding-base-horizontal;
+    }
+    //action buttons in the form
+    .form-action {
+      .btn {
+        margin: 0 0.333em;
+        border-radius: @border-radius-base;
+      }
+    }
+
+    //Styling File Upload in IE
+    input[type="file"] {
+      padding: 0;
+      //Browse textbox
+      &::-ms-value {
+        border: 1px solid @input-border;
+        background-color: @input-bg;
+      }
+
+      //Browse button
+      &::-ms-browse {
+        border: 1px solid @input-border;
+      }
+    }
+  }
+
+  //list with forms
+  .app-list, .app-livelist {
+    .app-list-item {
+      .app-form {
+        margin-bottom: 0;
+        box-shadow: none;
+      }
+    }
+  }
+
+  //filter
+  .app-livefilter {
+    .control-label, .app-label {
+      padding: 1em 1em 0;
+      margin-bottom: 1em;
+      font-weight: bold;
+    }
+    .panel-footer.form-action {
+      padding: @padding-base-horizontal;
+      border-top: 1px solid @panel-inner-border;
+    }
+    .form-action {
+      .btn {
+        margin: 0 0.333em;
+        border-radius: @border-radius-base;
+      }
+    }
+    .panel-body {
+      padding: @padding-base-horizontal;
+    }
+  }
+  /***search widget****/
+  .app-search {
+    .input-group-addon {
+      padding: 0.667em;
+      &:hover {
+        background: @input-group-addon-hover-bg;
+      }
+    }
+  }
+
+  /******grid styles*******/
+  .app-grid {
+    .table {
+      thead {
+        th {
+          border-color: rgba(0,0,0,0.07);
+          .header-data {
+            font-size: 0.917em;
+          }
+          .sort-buttons-container {
+            .sort-button {
+             .up {
+               border-width: 0 0.333em 0.333em;
+               bottom: -2px;
+             }
+             .down {
+               border-width: 0.333em 0.333em 0;
+               top: 0.250em;
+             }
+            }
+          }
+          &.info {
+            background-color: lighten(@state-info-bg, 10%);
+          }
+        }
+      }
+    }
+    //When table is condensed
+    .input-group.input-group-sm {
+      .input-group-addon, .input-group-btn {
+        padding: 0 4px;
+        .btn {
+          .app-icon {
+            font-size: 11px;
+          }
+        }
+      }
+      .input-group-addon {
+        .btn .app-icon {
+          color: @text-color;
+        }
+      }
+    }
+    > .panel-footer {
+       .app-datagrid-paginator {
+          .app-datanavigator a:focus {
+            box-shadow: inset 0px 0px 0px 1px @brand-primary;
+          }
+       }
+    }
+  }
+  //carousel styling: removing the left and right background image
+  .carousel-control {
+    &.left, &.right {
+      background-image: none;
+    }
+  }
+
+/****accordion classes****/
+  .app-accordion {
+    .app-accordion-panel {
+      .panel-heading {
+        .panel-actions {
+          right: 1em;
+          top: 1.5em;
+        }
+      }
+    }
+  }
+
+/***wizard styles***/
+  .app-wizard {
+    .app-wizard-steps {
+        .app-wizard-step:not(:last-child) {
+           &.active .arrow {
+             border-color: rgba(0, 0, 0, 0.3);
+           }
+        }
+    }
+  }
+
+
+  //file upload button
+  .app-single-file-upload {
+    .glyphicon {
+      margin-right: 0.500em;
+    }
+  }
+
+
+  /*Date, DateTime & Dropdown widgets*/
+  .app-calendar, .app-date, .app-datetime, .app-timeinput {
+     //setting the margin for the group button so that it shows up over the input
+    .input-group-btn:last-child {
+        > .btn, .btn-group {
+          margin-left: 0;
+        }
+    }
+    thead tr th {
+      button.btn-default {
+        width: 100%;
+        font-size: 1em;
+        background: @btn-default-bg;
+        color: @btn-default-color;
+        padding: 0.55em .83em;
+      }
+    }
+    tbody {
+      .btn-default {
+        background-color: @body-bg;
+        border-color: @gray-lighter;
+        color: @text-color;
+        width: auto;
+        box-shadow: none;
+        padding: 0.66em;
+        &.btn-info {
+          background-color: lighten(@brand-primary, 30%);
+          color: @text-color;
+        }
+        &:hover {
+          background-color: @component-active-bg;
+          border-color: @component-active-bg;
+          color: @component-active-color;
+          .text-info {
+            color: inherit;
+          }
+        }
+        .text-info {
+          color: @brand-primary;
+          font-weight: bold;
+        }
+      }
+      td.is-highlighted:not(.disabled):not(.selected) span {
+        background-color: @component-active-bg;
+        border-color: @component-active-bg;
+        color: @component-active-color;
+        &.text-info {
+          color: inherit;
+        }
+      }
+      td {
+        &.week {
+          span {
+             color: @brand-primary;
+             &:hover {
+               background-color: transparent;
+               color: @brand-primary;
+             }
+          }
+        }
+        span {
+            &.text-info {
+              color: @brand-primary;
+              font-weight: bold;
+            }
+            &.selected {
+              background-color: lighten(@brand-primary, 30%);
+              color: @text-color;
+            }
+            &:hover {
+              background-color: @component-active-bg;
+              border-color: @component-active-bg;
+              color: @component-active-color;
+            }
+            &.disabled, &.is-other-month {
+              &:hover {
+                color: rgba(0, 0, 0, 0.25);
+                background-color: rgba(168,168,168,0.05);
+              }
+            }
+        }
+      }
+    }
+    small {
+      font-size: 1em;
+      font-weight: normal;
+    }
+    .input-group {
+      display: flex;
+    }
+    .input-group .form-control.app-dateinput {
+      padding-right: 65px;
+    }
+    .input-group-btn {
+      position: absolute;
+      right: 37px;
+      top: 0;
+      border-bottom: none;
+      z-index: 5;
+    }
+    .app-grid .app-datagrid .table-container .filter-row .input-group .input-group-addon {
+      width: 50px;
+    }
+  }
+
+  //styling for the popup calendar actions
+  .bs-datepicker {
+    border: 1px solid @input-border;
+    .bs-datepicker-head {
+      background: @btn-default-bg;
+      color: @btn-default-color;
+    }
+    .bs-datepicker-body {
+      padding: 0;
+      border: none;
+    }
+    table td.is-highlighted:not(.disabled):not(.selected) span {
+      background-color: @component-active-bg;
+      border-color: @component-active-bg;
+      color: @component-active-color;
+      &.text-info {
+        color: inherit;
+      }
+    }
+  }
+
+  //Time Widget classes for styling the buttons
+  .app-timeinput, .app-datetime {
+    tbody {
+      .am-pm .btn {
+          border: 1px solid @input-border;
+          padding: 8px 12px;
+      }
+      .btn-link {
+        width: 100%;
+        background-color: transparent;
+        &:hover {
+          background-color: @btn-primary-bg;
+          color: @btn-primary-color;
+        }
+        span:hover {
+          border-color: @component-active-color;
+        }
+      }
+    }
+  }
+
+  //Calendar Specific
+  .app-calendar {
+    background-color: @body-bg;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.05);
+    .well.well-sm {
+      background-color: @body-bg;
+      padding: 0;
+      margin: 0;
+      tr:nth-child(2) th {
+        padding: 10px 12px;
+
+        &:first-child {
+          padding-left: 20px;
+        }
+        &:last-child {
+          padding-right: 20px;
+        }
+      }
+      tr td {
+        &:first-child {
+          padding-left: 10px;
+        }
+        &:last-child {
+          padding-right: 10px;
+        }
+      }
+    }
+    .fc {
+      .fc-state-default, .fc-button-primary {
+        background: @btn-default-bg;
+        border: 1px solid @btn-default-border;
+        color: @btn-default-color;
+        text-shadow: none;
+        &.fc-state-hover, &:focus, &.fc-state-active, &.fc-button-active {
+          color: @component-active-color;
+          background: @component-active-bg;
+          border: 1px solid @component-active-bg;
+        }
+      }
+    }
+    .fc {
+      .fc-toolbar {
+        h2 {
+          color: @text-color;
+        }
+      }
+    }
+    .fc-widget-header {
+      background-color: @body-bg;
+      color: @text-color;
+    }
+    .fc-body {
+      .fc-row {
+        min-height: 5em;
+      }
+    }
+    .fc-day-number {
+      padding: .5em .3em;
+      color: @wm-calendar-text-color;
+      font-size: 1.52em;
+      text-align: left;
+    }
+  }
+/*********************************************************************************************************************************************/
+/****************************************************Advanced editors******************************************************************************/
+/*********************************************************************************************************************************************/
+/******rich-editor class*******/
+  .app-richtexteditor {
+    .btn-default {
+      background-color: @gray-lighter;
+      border-color: @gray-light;
+      color: @text-color;
+      &.disabled, &[disabled], &.disabled:hover, &[disabled]:hover, &.disabled:focus, &[disabled]:focus,
+      &.disabled.focus, &.focus[disabled], &.disabled:active, &[disabled]:active, &.disabled.active, &.active[disabled],
+      &.disabled.active, &.active[disabled] {
+        background-color: @gray-lighter;
+        color: @text-color;
+      }
+      &:focus, &.active , &:active:hover  {
+        background-color: @component-active-bg;
+        color: @component-active-color;
+        border-color: @component-active-bg;
+      }
+    }
+
+    .ta-root .ta-toolbar .btn-group .btn {
+      height: 3em;
+      padding: 1em;
+    }
+  }
+
+  fieldset[disabled] {
+    .app-richtexteditor {
+      .btn-default, .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
+        background-color: @gray-lighter;
+        color: @text-color;
+      }
+    }
+  }
+
+  //Tree
+  .app-tree {
+    ul {
+      li {
+        span {
+          &:hover {
+            color: @text-color;
+          }
+        }
+        &.selected {
+          > i, > span {
+            color: @brand-primary;
+          }
+        }
+      }
+    }
+  }
+
+/***color picker class: adding the default size and padding to the addon*******/
+  .app-colorpicker {
+    &.input-group {
+      width: 13em;
+    }
+  }
+/***popover class: removing the radius*******/
+  .popover {
+    padding: 0;
+    border-radius: @border-radius-base;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+    color: @text-color;
+    .panel-footer {
+       .btn-default {
+          color: @gray-dark;
+       }
+    }
+  }
+
+  .app-fileupload .app-multi-file-upload, .app-fileupload .app-single-file-upload {
+    height: auto;
+    min-height: 3em;
+  }
+
+  .app-files-upload-status {
+    padding-top: 0.833em;
+    &.multiple {
+      padding-top: 0.333em;
+      font-size: 1.2em;
+    }
+  }
+
+  /***Slider widget styling*******************/
+  input[type='range'] {
+     color: @brand-primary;
+  }
+}

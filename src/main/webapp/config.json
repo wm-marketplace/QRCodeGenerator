@@ -1,0 +1,68 @@
+{
+  "displayName" : "QR_Code_Generator",
+  "group" : "",
+  "iconUrl" : "/resources/images/imagelists/prefab-icon.png",
+  "resources" : {
+    "styles" : [ "/pages/Main/Main.css" ],
+    "scripts" : [ "/resources/library/qrcode.min.js" ]
+  },
+  "properties" : {
+    "qrcodetext" : {
+      "type" : "string",
+      "displayName" : "QrCodeText",
+      "description" : "QrCodeText",
+      "bindable" : "in-bound",
+      "value" : "WaveMaker",
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "width" : {
+      "type" : "number",
+      "displayName" : "Width",
+      "description" : "Width",
+      "bindable" : "in-bound",
+      "value" : 128,
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "height" : {
+      "type" : "number",
+      "displayName" : "Height",
+      "description" : "Height",
+      "bindable" : "in-bound",
+      "value" : 128,
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "darkcolor" : {
+      "type" : "string",
+      "displayName" : "DarkColor",
+      "description" : "DarkColor -  hexa code",
+      "bindable" : "in-bound",
+      "value" : "#000000",
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    },
+    "lightcolor" : {
+      "type" : "string",
+      "displayName" : "LightColor",
+      "description" : "LightColor -  hexa code",
+      "bindable" : "in-bound",
+      "value" : "#ffffff",
+      "widget" : "string",
+      "show" : true,
+      "showAt" : "",
+      "disabled" : false
+    }
+  },
+  "events" : { },
+  "methods" : { }
+}
