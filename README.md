@@ -1,15 +1,15 @@
 ## QRCodeGenerator
 QRCode.js is a JavaScript library for generating QR codes. It can be used in web applications to generate QR codes dynamically.
     
-##Installation
+## Installation
 You can include qrcode.min.js in your project by downloading it and hosting it locally in resources
 
-##Usage
+## Usage
 To generate a QR code, follow these steps:
 1.Include a container element in your HTML
 2.Create a new QRCode instance and pass the container element
 
-##API
+## API
     QRCode(element, options)
 
 Creates a new QR code instance.
@@ -68,7 +68,7 @@ Creates a new QR code instance.
 
   You can also add your own HSQLDB database or other data files to this directory. All HSQLDB databases must be in this directory.
 
-##src/main/webapp/pages
+## src/main/webapp/pages
   Each project page creates a folder by the name of the page, i.e Main. 
   All page files in the pages folder are studio managed. 
   Files you need to know:
